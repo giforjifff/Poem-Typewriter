@@ -12,7 +12,7 @@ function App() {
   const [error, setError] = useState(null);
   const [selectedPoem, setSelectedPoem] = useState(null);
   const [displayedText, setDisplayedText] = useState('');
-  const [textDelay, setTextDelay] = useState(150);
+  const [textDelay, setTextDelay] = useState(225);
   const [charIndex, setCharIndex] = useState(0);
 
   const test = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \n Not to be";
@@ -90,7 +90,7 @@ function App() {
           clearInterval(intervalRef.current);
           intervalRef.current = null; // Reset the ref
         }
-      }, textDelay);
+      }, 500-textDelay);
 
       console.log("Typewriter Effect: Interval started with ID:", intervalRef.current);
 
@@ -139,7 +139,7 @@ function App() {
           clearInterval(intervalRef.current);
           intervalRef.current = null; // Reset the ref
         }
-      }, textDelay);
+      }, 550-textDelay);
 
       console.log("Typewriter Effect: Interval started with ID:", intervalRef.current);
 
