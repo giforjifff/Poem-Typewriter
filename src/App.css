@@ -99,6 +99,10 @@ body {
   font-family: var(--font-main); /* Apply the chosen main font */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  align-items: center; /* Center content horizontally */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center content vertically */
+  flex-direction: column; /* Stack content vertically */
 }
 
 /* --- App Container --- */
@@ -164,6 +168,7 @@ main {
   font-size: 1.15em; /* Slightly larger poem text */
   line-height: 1.7; /* Increase line spacing */
   color: var(--color-text);
+  text-align: center;
   /* white-space: pre-wrap; is applied inline in JSX, keep it there */
 }
 
