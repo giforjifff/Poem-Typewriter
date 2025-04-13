@@ -1,7 +1,6 @@
 {
   "name": "randompoem",
   "private": true,
-  "homepage": "https://giforjifff.github.io/Poem-Typewriter",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
