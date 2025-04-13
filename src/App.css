@@ -1,0 +1,233 @@
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap');
+
+/* ... rest of your CSS ... */
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+
+/* Basic Centering & Font */
+
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap');
+
+/* --- Font Variables (Choose one set or mix/match) --- */
+:root {
+  /* Option 1: Roboto (Sans-serif) */
+  --font-main: 'Roboto', sans-serif;
+  --font-heading: 'Roboto', sans-serif;
+  --font-poem: 'Roboto', sans-serif;
+
+  /* Option 2: Merriweather (Serif) */
+  /* --font-main: 'Merriweather', serif; */
+  /* --font-heading: 'Merriweather', serif; */
+  /* --font-poem: 'Merriweather', serif; */
+
+  /* Option 3: Source Code Pro (Monospace) */
+  /* --font-main: 'Source Code Pro', monospace; */
+  /* --font-heading: 'Source Code Pro', monospace; */
+  /* --font-poem: 'Source Code Pro', monospace; */
+
+  /* Option 4: Lato (Alternative Sans-serif) */
+  /* --font-main: 'Lato', sans-serif; */
+  /* --font-heading: 'Lato', sans-serif; */
+  /* --font-poem: 'Lato', sans-serif; */
+
+   /* Option 5: Mixed Fonts */
+  /* --font-main: 'Lato', sans-serif;           /* Default text */
+  /* --font-heading: 'Merriweather', serif;    /* Headings */
+  /* --font-poem: 'Merriweather', serif;       /* Poem text */
+
+
+  /* --- Colors --- */
+  --color-background: #121212; /* Dark background */
+  --color-text: #e0e0e0;       /* Light gray text */
+  --color-text-strong: #ffffff; /* White text */
+  --color-primary: #bb86fc;    /* A nice purple accent (Material Design dark theme) */
+  --color-primary-variant: #3700b3;
+  --color-secondary: #03dac6;   /* A teal accent */
+  --color-error: #cf6679;      /* Error color for dark themes */
+  --color-border: #333333;     /* Darker border */
+  --color-surface: #1e1e1e;    /* Slightly lighter surface for cards/displays */
+}
+
+/* --- Base Styles --- */
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-main); /* Apply the chosen main font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- App Container --- */
+.App {
+  min-height: 100vh; /* Ensure background covers full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  padding: 30px 20px;
+  box-sizing: border-box; /* Include padding in width calculation */
+  text-align: center; /* Center inline text elements by default */
+}
+
+/* --- Header --- */
+.App-header {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.App-header h1 {
+  font-family: var(--font-heading); /* Apply heading font */
+  font-size: 2.5em; /* Larger title */
+  color: var(--color-text-strong);
+  font-weight: 700; /* Bolder heading */
+  margin: 0;
+}
+
+/* --- Main Content Area --- */
+main {
+  width: 100%;
+  max-width: 700px; /* Limit content width for readability */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Poem Display Area --- */
+.poem-display {
+  width: 100%;
+  margin: 30px 0;
+  padding: 25px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-surface); /* Subtle background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  min-height: 200px;
+  text-align: left; /* Keep poem text left-aligned */
+  box-sizing: border-box;
+}
+
+.poem-display h2 {
+  font-family: var(--font-heading); /* Apply heading font */
+  font-size: 1.6em;
+  font-weight: 700;
+  color: var(--color-text-strong);
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center; /* Center the poem title within the box */
+}
+
+.poem-text {
+  font-family: var(--font-poem); /* Apply poem font */
+  font-size: 1.15em; /* Slightly larger poem text */
+  line-height: 1.7; /* Increase line spacing */
+  color: var(--color-text);
+  /* white-space: pre-wrap; is applied inline in JSX, keep it there */
+}
+
+/* --- Cursor --- 
+
+.cursor {
+  display: inline-block;
+  margin-left: 1px;
+  background-color: var(--color-text); 
+  width: 8px; 
+  height: 1.15em; 
+  vertical-align: text-bottom; 
+  opacity: 1;
+  animation: blink 3s step-end infinite;
+}
+*/
+
+@keyframes blink {
+  from, to { opacity: 1 }
+  50% { opacity: 0 }
+}
+
+/* --- Button Style --- */
+button {
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: var(--font-main); /* Use main font */
+  cursor: pointer;
+  background-color: var(--color-primary); /* Use accent color */
+  color: #000000; /* Text color that contrasts with primary */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 20px; /* Space above button */
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--color-primary-variant); /* Darker shade on hover */
+  color: var(--color-text-strong);
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+button:disabled {
+  background-color: var(--color-border); /* Muted background when disabled */
+  color: #666666; /* Muted text color */
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --- Loading/Error Messages --- */
+p {
+  font-size: 1.1em;
+}
+
+.error-message {
+  color: var(--color-error); /* Use dark-theme error color */
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid var(--color-error);
+  background-color: rgba(207, 102, 121, 0.1); /* Subtle red background */
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 700px; /* Match main content width */
+}
